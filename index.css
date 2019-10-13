@@ -266,6 +266,12 @@
                                                 transition: color 0.2s;
                                             }
                                             
+                                            @media only screen and (max-width:500px) {
+                                                #profilecard {
+                                                    display: none;
+                                                }
+                                            }
+                                            
                                             .ion-social-facebook:hover {
                                                 color: #3b5998;
                                             }
