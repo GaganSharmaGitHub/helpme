@@ -26,9 +26,6 @@ function expand() {
 }
 
 
-function closetask(i) {
-    var idk = i;
-    var element = document.getElementById(idk);
-    element.style.backgroundColor = "white";
-    element.classList.add("slideOutDown");
-}
+
+document.querySelector(".close").addEventListener("click",function(){
+    $(".task").fadeOut(2000)});
