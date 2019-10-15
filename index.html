@@ -80,9 +80,9 @@
                     <div class="card-body">
                         <h4 class="card-title">Graphics Design</h4>
                         <p class="card-text">Iris Media </p>
-                        <a onclick="expand(0)" class="btn btn-primary">
+                        <a style="text-decoration: none;" onclick="expand(0)" class="btn btn-primary">
                             <ion-icon name="log-in"></ion-icon>Apply</a>
-                        <a href="#" class="btn btn-primary">
+                        <a class="btn btn-primary">
                             <ion-icon name="share"></ion-icon>Share</a>
                         <a onclick="expand(0)" class="btn btn-primary">
                             <ion-icon class="fa fa-info-circle"></ion-icon>Details</a>
@@ -223,8 +223,8 @@
                 </div>
             </div>
             <div id="task1" class="task animated slideInDown">
-                <h1 onclick="close(0)">Task details</h1>
-                <span class="close" onclick="close(0)">X</span>
+                <h1>Task details</h1>
+                <span class="close" onclick="closed(0)">X</span>
             </div>
         </div>
         <footer id="plans">
@@ -253,7 +253,7 @@
                 </p>
             </div>
         </footer>
-        <div id="sidebar">
+        <div id="sidebar" class="animated slideInLeft">
             <div id="topofsidebar">
                 <div id="userprofile">
                     <img id="profilephoto" src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200">
