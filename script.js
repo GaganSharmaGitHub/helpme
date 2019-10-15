@@ -18,3 +18,17 @@ function menuicon(x) {
         document.getElementById("sidebar").style.width = "0px"
     } else { document.getElementById("sidebar").style.width = "300px" }
 }
+
+function expand() {
+    document.getElementById("task1").style.display = "block";
+
+    document.getElementById("task1").classList.remove("slideOutDown");
+}
+
+
+function closetask(i) {
+    var idk = i;
+    var element = document.getElementById(idk);
+    element.style.backgroundColor = "white";
+    element.classList.add("slideOutDown");
+}

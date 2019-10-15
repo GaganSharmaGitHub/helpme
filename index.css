@@ -1,295 +1,319 @@
-                                            html {
-                                                scroll-behavior: smooth;
-                                            }
-                                            
-                                            #header {
-                                                background-image: url(https://images.unsplash.com/photo-1461532257246-777de18cd58b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80);
-                                                width: 100%;
-                                                height: 100vh;
-                                                background-size: cover;
-                                                animation: headerchange 20s infinite;
-                                            }
-                                            
-                                            #headeropa {
-                                                background-color: rgba(10, 10, 10, 0.336);
-                                                width: 100%;
-                                                height: 100vh;
-                                            }
-                                            
-                                            #titleandbtn h1 {
-                                                width: fit-content;
-                                                font-size: 10vh;
-                                                padding: 10px 10px 10px 10px;
-                                                color: rgb(10, 10, 10);
-                                                mix-blend-mode: screen;
-                                                font-family: 'Comfortaa', cursive;
-                                                background-color: white;
-                                            }
-                                            
-                                            .mainbtn i {
-                                                transition: 1s;
-                                                display: none;
-                                            }
-                                            
-                                            #tasks {
-                                                z-index: 1;
-                                                width: 100%;
-                                            }
-                                            
-                                            #titleandbtn h3 {
-                                                color: white;
-                                                width: fit-content;
-                                                padding: 7px 7px 7px 7px;
-                                                background-color: #fc5c65;
-                                                margin-bottom: 30px;
-                                            }
-                                            
-                                            #titleandbtn {
-                                                position: absolute;
-                                                top: 30%;
-                                            }
-                                            
-                                            #profilecard {
-                                                float: right;
-                                            }
-                                            
-                                            .mainbtn {
-                                                background-color: #fa813100;
-                                                margin: 5px 15px 5px 5px;
-                                                padding: 2px 5px 5px 5px;
-                                                color: rgb(255, 255, 255);
-                                                border: solid 2px white;
-                                                border-radius: 20%;
-                                                font-size: 5vh;
-                                                cursor: pointer;
-                                                display: inline-block;
-                                                width: fit-content;
-                                                transition: 1s;
-                                                ;
-                                            }
-                                            
-                                            #stickytop {
-                                                z-index: 40;
-                                                height: fit-content;
-                                                width: 100%;
-                                                background-color: white;
-                                                position: sticky;
-                                                top: 0px;
-                                                display: none;
-                                            }
-                                            
-                                            #stickytop h1 {
-                                                display: inline-block;
-                                                font-size: 10vh;
-                                                width: fit-content;
-                                                padding: 10px 10px 10px 10px;
-                                                font-family: 'Comfortaa', cursive;
-                                                background-color: rgb(255, 253, 253);
-                                            }
-                                            
-                                            .mainbtn:hover {
-                                                cursor: pointer;
-                                                transition: 1s;
-                                                color: #9c88ff;
-                                                background-color: #f53737;
-                                                transition: 1s;
-                                            }
-                                            
-                                            body {
-                                                height: 2000px;
-                                            }
-                                            
-                                            #sidebar {
-                                                width: 0px;
-                                                height: 100vh;
-                                                overflow: hidden;
-                                                background-color: rgb(82, 82, 82);
-                                                color: white;
-                                                position: fixed;
-                                                top: 15vh;
-                                                transition: 1s;
-                                            }
-                                            
-                                            #userprofile {
-                                                overflow: hidden;
-                                                height: 30%;
-                                                width: 50%;
-                                                display: inline-block;
-                                            }
-                                            
-                                            #userprofile h3 {
-                                                width: 50%;
-                                                position: absolute;
-                                                top: 140px;
-                                                background-color: rgba(34, 33, 33, 0.856);
-                                            }
-                                            
-                                            #profilephoto {
-                                                width: 100%;
-                                                height: 180px;
-                                            }
-                                            
-                                            #profileoptions {
-                                                transform: translateY(-20px);
-                                                width: 40%;
-                                                text-align: center;
-                                                display: inline-block;
-                                            }
-                                            
-                                            #profileoptions p i {
-                                                margin: 5px 15px 5px 5px;
-                                            }
-                                            
-                                            #topofsidebar {
-                                                overflow: hidden;
-                                            }
-                                            
-                                            #optionlist li i {
-                                                display: none;
-                                            }
-                                            
-                                            #optionlist {
-                                                overflow: hidden;
-                                                margin-left: 0px;
-                                                list-style: none;
-                                            }
-                                            
-                                            #optionlist li {
-                                                transform: translateX(-40px);
-                                                font-size: 3.5vh;
-                                                padding: 5px 5px 5px 5px;
-                                                height: fit-content;
-                                                color: rgb(197, 197, 197);
-                                                cursor: pointer;
-                                                transition: ease;
-                                            }
-                                            
-                                            #optionlist li:hover {
-                                                margin-left: 20px;
-                                                ;
-                                                color: white;
-                                                font-size: 4.5vh;
-                                                transition: 1s;
-                                            }
-                                            
-                                            #aboutus {
-                                                width: 100%;
-                                                ;
-                                                cursor: pointer;
-                                                position: absolute;
-                                                bottom: 100px;
-                                                text-align: center;
-                                            }
-                                            
-                                            a:link {
-                                                color: white;
-                                                text-decoration: none;
-                                            }
-                                            
-                                            #l1 {
-                                                border-left: solid 10px violet;
-                                            }
-                                            
-                                            #l2 {
-                                                border-left: solid 10px blue;
-                                            }
-                                            
-                                            #l3 {
-                                                border-left: solid 10px green;
-                                            }
-                                            
-                                            #l4 {
-                                                border-left: solid 10px yellow;
-                                            }
-                                            
-                                            #l5 {
-                                                border-left: solid 10px rgb(255, 136, 0);
-                                            }
-                                            
-                                            #l6 {
-                                                border-left: solid 10px red;
-                                            }
-                                            
-                                            footer {
-                                                background-color: #333;
-                                                padding: 50px;
-                                                font-size: 80%;
-                                            }
-                                            
-                                            .footer-nav {
-                                                list-style: none;
-                                                float: left;
-                                            }
-                                            
-                                            .social-links {
-                                                list-style: none;
-                                                float: right;
-                                            }
-                                            
-                                            .footer-nav li,
-                                            .social-links li {
-                                                display: inline-block;
-                                                margin-right: 20px;
-                                            }
-                                            
-                                            .footer-nav li:last-child,
-                                            .social-links li:last-child {
-                                                margin-right: 0;
-                                            }
-                                            
-                                            .footer-nav li a:link,
-                                            .footer-nav li a:visited,
-                                            .social-links li a:link,
-                                            .social-links li a:visited {
-                                                text-decoration: none;
-                                                border: 0;
-                                                color: #888;
-                                                -webkit-transition: color 0.2s;
-                                                transition: color 0.2s;
-                                            }
-                                            
-                                            .footer-nav li a:hover,
-                                            .footer-nav li a:active {
-                                                color: #ddd;
-                                            }
-                                            
-                                            .social-links li a:link,
-                                            .social-links li a:visited {
-                                                font-size: 160%;
-                                            }
-                                            
-                                            .ion-social-facebook,
-                                            .ion-social-twitter,
-                                            .ion-social-googleplus,
-                                            .ion-social-instagram {
-                                                -webkit-transition: color 0.2s;
-                                                transition: color 0.2s;
-                                            }
-                                            
-                                            @media only screen and (max-width:500px) {
-                                                #profilecard {
-                                                    display: none;
-                                                }
-                                            }
-                                            
-                                            .ion-social-facebook:hover {
-                                                color: #3b5998;
-                                            }
-                                            
-                                            .ion-social-twitter:hover {
-                                                color: #00aced;
-                                            }
-                                            
-                                            .ion-social-googleplus:hover {
-                                                color: #dd4b39;
-                                            }
-                                            
-                                            .ion-social-instagram:hover {
-                                                color: #517fa4;
-                                            }
-                                            
-                                            footer p {
-                                                color: #888;
-                                                text-align: center;
-                                                margin-top: 20px;
-                                            }
+ html {
+     scroll-behavior: smooth;
+ }
+ 
+ #header {
+     background-image: url(https://images.unsplash.com/photo-1461532257246-777de18cd58b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80);
+     width: 100%;
+     height: 100vh;
+     background-size: cover;
+     animation: headerchange 20s infinite;
+ }
+ 
+ #headeropa {
+     background-color: rgba(10, 10, 10, 0.336);
+     width: 100%;
+     height: 100vh;
+ }
+ 
+ #titleandbtn h1 {
+     width: fit-content;
+     font-size: 10vh;
+     padding: 10px 10px 10px 10px;
+     color: rgb(10, 10, 10);
+     mix-blend-mode: screen;
+     font-family: 'Comfortaa', cursive;
+     background-color: white;
+ }
+ 
+ .mainbtn i {
+     transition: 1s;
+     display: none;
+ }
+ 
+ #tasks {
+     z-index: 1;
+     width: 100%;
+ }
+ 
+ #titleandbtn h3 {
+     color: white;
+     width: fit-content;
+     padding: 7px 7px 7px 7px;
+     background-color: #fc5c65;
+     margin-bottom: 30px;
+ }
+ 
+ #titleandbtn {
+     position: absolute;
+     top: 30%;
+ }
+ 
+ #profilecard {
+     float: right;
+ }
+ 
+ .mainbtn {
+     background-color: #fa813100;
+     margin: 5px 15px 5px 5px;
+     padding: 2px 5px 5px 5px;
+     color: rgb(255, 255, 255);
+     border: solid 2px white;
+     border-radius: 20%;
+     font-size: 5vh;
+     cursor: pointer;
+     display: inline-block;
+     width: fit-content;
+     transition: 1s;
+     ;
+ }
+ 
+ #stickytop {
+     z-index: 40;
+     height: fit-content;
+     width: 100%;
+     background-color: white;
+     position: sticky;
+     top: 0px;
+     display: none;
+ }
+ 
+ #stickytop h1 {
+     display: inline-block;
+     font-size: 10vh;
+     width: fit-content;
+     padding: 10px 10px 10px 10px;
+     font-family: 'Comfortaa', cursive;
+     background-color: rgb(255, 253, 253);
+ }
+ 
+ .mainbtn:hover {
+     cursor: pointer;
+     transition: 1s;
+     background-color: white;
+     color: #f53737;
+     transition: 1s;
+     border-color: #f53737;
+ }
+ 
+ body {
+     height: 2000px;
+ }
+ 
+ #sidebar {
+     width: 0px;
+     height: 100vh;
+     overflow: auto;
+     background-color: rgb(82, 82, 82);
+     color: white;
+     position: fixed;
+     top: 15vh;
+     z-index: 70;
+     transition: 1s;
+ }
+ 
+ #userprofile {
+     overflow: hidden;
+     height: 30%;
+     width: 50%;
+     display: inline-block;
+ }
+ 
+ #userprofile h3 {
+     width: 50%;
+     position: absolute;
+     top: 140px;
+     background-color: rgba(34, 33, 33, 0.856);
+ }
+ 
+ #profilephoto {
+     width: 100%;
+     height: 180px;
+ }
+ 
+ #profileoptions {
+     transform: translateY(-20px);
+     width: 40%;
+     text-align: center;
+     display: inline-block;
+ }
+ 
+ #profileoptions p i {
+     margin: 5px 15px 5px 5px;
+ }
+ 
+ #topofsidebar {
+     overflow: hidden;
+ }
+ 
+ #optionlist li i {
+     display: none;
+ }
+ 
+ #optionlist {
+     overflow: hidden;
+     margin-left: 0px;
+     list-style: none;
+ }
+ 
+ #optionlist li {
+     transform: translateX(-40px);
+     font-size: 3.5vh;
+     padding: 5px 5px 5px 5px;
+     height: fit-content;
+     color: rgb(197, 197, 197);
+     cursor: pointer;
+     transition: ease;
+ }
+ 
+ #optionlist li:hover {
+     margin-left: 20px;
+     ;
+     color: white;
+     font-size: 4.5vh;
+     transition: 1s;
+ }
+ 
+ #aboutus {
+     width: 100%;
+     ;
+     cursor: pointer;
+     position: absolute;
+     bottom: 100px;
+     text-align: center;
+ }
+ 
+ a:link {
+     color: white;
+     text-decoration: none;
+ }
+ 
+ #l1 {
+     border-left: solid 10px violet;
+ }
+ 
+ #l2 {
+     border-left: solid 10px blue;
+ }
+ 
+ #l3 {
+     border-left: solid 10px green;
+ }
+ 
+ #l4 {
+     border-left: solid 10px yellow;
+ }
+ 
+ #l5 {
+     border-left: solid 10px rgb(255, 136, 0);
+ }
+ 
+ #l6 {
+     border-left: solid 10px red;
+ }
+ 
+ footer {
+     background-color: #333;
+     padding: 50px;
+     font-size: 80%;
+ }
+ 
+ .footer-nav {
+     list-style: none;
+     float: left;
+ }
+ 
+ .social-links {
+     list-style: none;
+     float: right;
+ }
+ 
+ .footer-nav li,
+ .social-links li {
+     display: inline-block;
+     margin-right: 20px;
+ }
+ 
+ .footer-nav li:last-child,
+ .social-links li:last-child {
+     margin-right: 0;
+ }
+ 
+ .footer-nav li a:link,
+ .footer-nav li a:visited,
+ .social-links li a:link,
+ .social-links li a:visited {
+     text-decoration: none;
+     border: 0;
+     color: #888;
+     -webkit-transition: color 0.2s;
+     transition: color 0.2s;
+ }
+ 
+ .footer-nav li a:hover,
+ .footer-nav li a:active {
+     color: #ddd;
+ }
+ 
+ .social-links li a:link,
+ .social-links li a:visited {
+     font-size: 160%;
+ }
+ 
+ .ion-social-facebook,
+ .ion-social-twitter,
+ .ion-social-googleplus,
+ .ion-social-instagram {
+     -webkit-transition: color 0.2s;
+     transition: color 0.2s;
+ }
+ 
+ @media only screen and (max-width:1000px) {
+     #profilecard {
+         display: none;
+     }
+ }
+ 
+ .ion-social-facebook:hover {
+     color: #3b5998;
+ }
+ 
+ .ion-social-twitter:hover {
+     color: #00aced;
+ }
+ 
+ .ion-social-googleplus:hover {
+     color: #dd4b39;
+ }
+ 
+ .ion-social-instagram:hover {
+     color: #517fa4;
+ }
+ 
+ footer p {
+     color: #888;
+     text-align: center;
+     margin-top: 20px;
+ }
+ 
+ .task {
+     z-index: 1;
+     height: 80vh;
+     width: 90%;
+     margin: 100px 50px 50px 50px;
+     background-color: rgb(201, 201, 201);
+     border: black solid thin;
+     position: fixed;
+     top: 0px;
+     left: 0px;
+     overflow: hidden;
+     display: none;
+ }
+ 
+ .close {
+     cursor: pointer;
+     font-size: 1000vh;
+     position: absolute;
+     top: 0px;
+     right: 0px;
+ }
