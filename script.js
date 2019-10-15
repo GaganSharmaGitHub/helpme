@@ -19,13 +19,17 @@ function menuicon(x) {
     } else { document.getElementById("sidebar").style.width = "300px" }
 }
 
-function expand() {
-    document.getElementById("task1").style.display = "block";
+function expand(x) {
+    var taskslist = ["task1", "task2", "task3"];
 
-    document.getElementById("task1").classList.remove("slideOutDown");
+    document.getElementById(taskslist[x]).style.display = "block";
+
+    document.getElementById(taskslist[x]).classList.remove("slideOutDown");
 }
 
+function close(x) {
+    var taskslist = ["task1", "task2", "task3"];
 
-
-document.querySelector(".close").addEventListener("click",function(){
-    $(".task").fadeOut(2000)});
+    document.getElementById(taskslist[x]).style.display = "none";
+    document.getElementById(taskslist[x]).classList.add("slideOutDown");
+}

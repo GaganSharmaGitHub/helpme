@@ -80,11 +80,11 @@
                     <div class="card-body">
                         <h4 class="card-title">Graphics Design</h4>
                         <p class="card-text">Iris Media </p>
-                        <a onclick="expand()" class="btn btn-primary">
+                        <a onclick="expand(0)" class="btn btn-primary">
                             <ion-icon name="log-in"></ion-icon>Apply</a>
                         <a href="#" class="btn btn-primary">
                             <ion-icon name="share"></ion-icon>Share</a>
-                        <a onclick="expand()" class="btn btn-primary">
+                        <a onclick="expand(0)" class="btn btn-primary">
                             <ion-icon class="fa fa-info-circle"></ion-icon>Details</a>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                             <ion-icon name="log-in"></ion-icon>Apply</a>
                         <a href="#" class="btn btn-primary">
                             <ion-icon name="share"></ion-icon>Share</a>
-                        <a href="#" class="btn btn-primary">
+                        <a class="btn btn-primary">
                             <ion-icon name="information-circle-outline"></ion-icon>Details</a>
 
                     </div>
@@ -223,8 +223,8 @@
                 </div>
             </div>
             <div id="task1" class="task animated slideInDown">
-                <h1>Task details</h1>
-                <span class="close" >X</span>
+                <h1 onclick="close(0)">Task details</h1>
+                <span class="close" onclick="close(0)">X</span>
             </div>
         </div>
         <footer id="plans">
