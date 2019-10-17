@@ -45,12 +45,9 @@
  }
  
  #titleandbtn {
+     background-color: #3b5998;
      position: absolute;
-     top: 30%;
- }
- 
- #profilecard {
-     float: right;
+     top: 10px;
  }
  
  .mainbtn {
@@ -323,4 +320,10 @@
      position: absolute;
      top: 0px;
      right: 0px;
+ }
+ 
+ @media screen and (max-width: 600px) {
+     #sidebar {
+         width: 100vw;
+     }
  }
