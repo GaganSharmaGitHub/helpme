@@ -68,9 +68,7 @@
      ;
  }
  
- #stickytop .container {
-     display: none
- }
+ #stickytop .container {}
  
  #stickytop {
      box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -185,8 +183,7 @@
      width: 100%;
      ;
      cursor: pointer;
-     position: absolute;
-     bottom: 100px;
+     padding-bottom: 10px;
      text-align: center;
  }
  
@@ -278,6 +275,9 @@
  @media only screen and (max-width:1000px) {
      #profilecard {
          display: none;
+     }
+     #sidebar {
+         width: 100%;
      }
  }
  
