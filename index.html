@@ -224,9 +224,28 @@
             </div>
             <div id="taskPopUp" class="task animated slideInDown">
                 <div id="taskData">
-                    <h1 id="taskDataTitle">Title</h1>
+                    <div id="taskPopUpHeader">
+                        <h1 id="taskDataTitle">Title</h1>
+                        <button class="btn btn-primary">Apply</button>
+                        <span class="close" onclick="closed(0)">X</span>
+
+                    </div>
+                    <div id="imageAndMainData">
+                        <p id="mainData">
+                            <b>Company:</b><span id="taskDataCompany">Company</span><br>
+                            <b>Skills:</b>
+                            <span id="taskDataSkills">Skills</span><br> <b>Reward:</b>
+                            <span id="taskDataReward">Reward</span><i class='fas fa-award'></i><br><b> Date:</b>
+                            <span id="taskDataDate">Date</span><br></p>
+                        <div id="companyImageDiv"><img id="companyImage"></div>
+                    </div>
+                    <div>
+                        <b>Description:</b><br>
+                        <p id="taskDataDetails">Details</p>
+                    </div>
+
                 </div>
-                <span class="close" onclick="closed(0)">X</span>
+
             </div>
         </div>
         <footer id="plans">

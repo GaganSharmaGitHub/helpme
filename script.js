@@ -36,11 +36,9 @@ function menuicon(x) {
 }
 
 function expand(x) {
-    var tasksDataList = [taskData1, taskData2, taskData3, taskData4];
+    writeData(x)
 
     document.getElementById("taskPopUp").style.display = "block";
-
-    document.getElementById("taskData").innerHTML = tasksDataList[x].title;
     document.getElementById("taskPopUp").classList.remove("slideOutLeft");
 }
 
@@ -61,3 +59,15 @@ var taskData1 = new taskData("Graphic Design", "Iris Media", "Graphics", "March"
 var taskData2 = new taskData("Testing", "Titus Tech", "JavaScript", "April", 200);
 var taskData3 = new taskData("C# coding", "TigerOne", "C#", "January", 200);
 var taskData4 = new taskData("python debugging", "Titus Tech", "python", "February", 250);
+
+function writeData(x) {
+    var tasksDataList = [taskData1, taskData2, taskData3, taskData4];
+    document.getElementById("taskDataTitle").innerHTML = tasksDataList[x].title;
+    document.getElementById("taskDataCompany").innerHTML = tasksDataList[x].company;
+    document.getElementById("taskDataSkills").innerHTML = tasksDataList[x].skills;
+    document.getElementById("taskDataDate").innerHTML = tasksDataList[x].date;
+    document.getElementById("taskDataReward").innerHTML = tasksDataList[x].reward;
+
+    document.getElementById("companyImage").src = "res/" +
+        tasksDataList[x].company + ".png";
+}
