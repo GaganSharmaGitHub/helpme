@@ -36,22 +36,28 @@ function menuicon(x) {
 }
 
 function expand(x) {
-    var taskslist = ["task1", "task2", "task3"];
+    var tasksDataList = [taskData1, taskData2, taskData3, taskData4];
 
-    document.getElementById(taskslist[x]).style.display = "block";
+    document.getElementById("taskPopUp").style.display = "block";
 
-    document.getElementById(taskslist[x]).classList.remove("slideOutLeft");
+    document.getElementById("taskData").innerHTML = tasksDataList[x].title;
+    document.getElementById("taskPopUp").classList.remove("slideOutLeft");
 }
 
 function closed(x) {
-    var taskslist = ["task1", "task2", "task3"];
 
-
-    document.getElementById(taskslist[x]).classList.add("slideOutLeft");
+    document.getElementById("taskPopUp").classList.add("slideOutLeft");
 }
 
-
-
-//document.querySelector(".close").addEventListener("click", function() {
-//  $(".task").fadeOut(2000)
-//});
+function taskData(title, company, skills, date, reward) {
+    this.title = title;
+    this.company = company;
+    this.detail = "details";
+    this.skills = skills;
+    this.reward = reward || 0;
+    this.date = date;
+}
+var taskData1 = new taskData("Graphic Design", "Iris Media", "Graphics", "March", 100);
+var taskData2 = new taskData("Testing", "Titus Tech", "JavaScript", "April", 200);
+var taskData3 = new taskData("C# coding", "TigerOne", "C#", "January", 200);
+var taskData4 = new taskData("python debugging", "Titus Tech", "python", "February", 250);

@@ -80,7 +80,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Graphics Design</h4>
                         <p class="card-text">Iris Media </p>
-                        <a style="text-decoration: none;" onclick="expand(0)" class="btn btn-primary">
+                        <a style="text-decoration: none;" class="btn btn-primary">
                             <ion-icon name="log-in"></ion-icon>Apply</a>
                         <a class="btn btn-primary">
                             <ion-icon name="share"></ion-icon>Share</a>
@@ -97,7 +97,7 @@
                             <ion-icon name="log-in"></ion-icon>Apply</a>
                         <a href="#" class="btn btn-primary">
                             <ion-icon name="share"></ion-icon>Share</a>
-                        <a class="btn btn-primary">
+                        <a class="btn btn-primary" onclick="expand(1)">
                             <ion-icon name="information-circle-outline"></ion-icon>Details</a>
 
                     </div>
@@ -111,7 +111,7 @@
                             <ion-icon name="log-in"></ion-icon>Apply</a>
                         <a href="#" class="btn btn-primary">
                             <ion-icon name="share"></ion-icon>Share</a>
-                        <a href="#" class="btn btn-primary">
+                        <a class="btn btn-primary" onclick="expand(2)">
                             <ion-icon name="information-circle-outline"></ion-icon>Details</a>
 
                     </div>
@@ -128,7 +128,7 @@
                             <ion-icon name="log-in"></ion-icon>Apply</a>
                         <a href="#" class="btn btn-primary">
                             <ion-icon name="share"></ion-icon>Share</a>
-                        <a href="#" class="btn btn-primary">
+                        <a class="btn btn-primary" onclick="expand(3)">
                             <ion-icon name="information-circle-outline"></ion-icon>Details</a>
 
                     </div>
@@ -222,8 +222,8 @@
                     </div>
                 </div>
             </div>
-            <div id="task1" class="task animated slideInDown">
-                <h1>Task details</h1>
+            <div id="taskPopUp" class="task animated slideInDown">
+                <div id="taskData"></div>
                 <span class="close" onclick="closed(0)">X</span>
             </div>
         </div>
