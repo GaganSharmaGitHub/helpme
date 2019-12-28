@@ -20,7 +20,7 @@
 
 <body>
     <div id="stickytop" class="animated fadeInDown">
-        <div class="container" class="animated rubberBand" style="width: 55px;" onclick="menuicon(this)" onclick="opennv()">
+        <div class="container" class="animated rubberBand" style="width: 5vw;" onclick="menuicon(this)" onclick="opennv()">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -37,7 +37,7 @@
                     <a href="#task">
                         <button class="mainbtn"><i class="fa fa-tasks"></i> Tasks</button></a>
 
-                    <button class="mainbtn">
+                    <button class="mainbtn" onclick="formPopUp()">
 
                     <i class="fa fa-plus-circle" class="animated pulse"></i> Add Task</button>
                     <a href="#skills" style="text-decoration: none;">
@@ -74,8 +74,8 @@
         <a id="task"></a>
         <h2>Tasks</h2>
         <div id="tasks" class="container">
-            <div class="row">
-                <div class="card col-sm-12 col-md-3" style="width:500px ;margin-left: 30px;">
+            <div class="row" id="postParent">
+                <div class="card col-sm-10 col-md-3">
                     <img class="card-img-top" src="res/Iris Media.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Graphics Design</h4>
@@ -88,7 +88,7 @@
                             <ion-icon class="fa fa-info-circle"></ion-icon>Details</a>
                     </div>
                 </div>
-                <div class="card col-sm-12 col-md-3" style="width:500px; margin-left: 30px;">
+                <div class="card col-sm-10 col-md-3" style="width:500px; margin-left: 30px;">
                     <img class="card-img-top" src="res/Titus Tech.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Testing</h4>
@@ -102,7 +102,7 @@
 
                     </div>
                 </div>
-                <div class="card col-sm-12 col-md-3" style="width:400px; margin-left: 30px;">
+                <div class="card col-sm-10 col-md-3" style="width:400px; margin-left: 30px;">
                     <img class="card-img-top" src="res/TigerOne.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">C# coding</h4>
@@ -119,7 +119,7 @@
 
 
 
-                <div class="card col-sm-12 col-md-3" style="width:400px; margin-left: 30px;">
+                <div class="card col-sm-10 col-md-3" style="width:400px; margin-left: 30px;">
                     <img class="card-img-top" src="res/Titus Tech.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Python Debugging</h4>
@@ -140,7 +140,7 @@
         <h2>Tasks by skils</h2>
         <div id="tasks" class="container">
             <div class="row">
-                <div class="card col-sm-12 col-md-3" style="width:500px; margin-left: 30px;">
+                <div class="card col-sm-10 col-md-3" style="width:500px; margin-left: 30px;">
                     <img class="card-img-top" src="https://www.arenach.com/wp-content/uploads/2019/07/graphic-design.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Graphics Designing</h4>
@@ -149,7 +149,7 @@
                             <ion-icon name="log-in"></ion-icon>View all tasks</a>
                     </div>
                 </div>
-                <div class="card col-sm-12 col-md-3" style="width:500px; margin-left: 30px;">
+                <div class="card col-sm-10 col-md-3" style="width:500px; margin-left: 30px;">
                     <img class="card-img-top" src="https://hackernoon.com/hn-images/1*ZXixptvL4rzkx3EDuj38xw.jpeg" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Coding</h4>
@@ -159,7 +159,7 @@
 
                     </div>
                 </div>
-                <div class="card col-sm-12 col-md-3" style="width:400px; margin-left: 30px;">
+                <div class="card col-sm-10 col-md-3" style="width:400px; margin-left: 30px;">
                     <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-FGq2iS9JHhRAPZyITL0lTZEZppeeAPp8ZZXO-L9wu5VmsSW0" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Travel</h4>
@@ -170,7 +170,7 @@
                     </div>
                 </div>
                 <a id="skills"></a>
-                <div class="card col-sm-12 col-md-3" style="width:400px ;margin-left: 30px">
+                <div class="card col-sm-10 col-md-3" style="width:400px ;margin-left: 30px">
                     <img class="card-img-top" src="https://greatperformersacademy.com/images/images/Articles_images/public-speaking-25.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Public speaking</h4>
@@ -189,7 +189,7 @@
             <a id="rewards"></a>
             <div class="container">
                 <div class="row">
-                    <div class="card col-sm-12 col-md-3" style="width:500px; margin-left: 30px;">
+                    <div class="card col-sm-10 col-md-3" style="width:500px; margin-left: 30px;">
                         <img class="card-img-top" src="https://img.maximummedia.ie/her_ie/eyJkYXRhIjoie1widXJsXCI6XCJodHRwOlxcXC9cXFwvbWVkaWEtaGVyLm1heGltdW1tZWRpYS5pZS5zMy5hbWF6b25hd3MuY29tXFxcL3dwLWNvbnRlbnRcXFwvdXBsb2Fkc1xcXC8yMDE1XFxcLzA4XFxcLzA2MTUzOTM0XFxcL2FtYXpvbi5qcGdcIixcIndpZHRoXCI6NjQwLFwiaGVpZ2h0XCI6MzYwLFwiZGVmYXVsdFwiOlwiaHR0cHM6XFxcL1xcXC93d3cuaGVyLmllXFxcL2Fzc2V0c1xcXC9pbWFnZXNcXFwvaGVyXFxcL25vLWltYWdlLnBuZz9pZD1iNmY4NGQ2MjdiNDExNGYwMGY1MFwiLFwib3B0aW9uc1wiOltdfSIsImhhc2giOiJiZjViODNhNzFhZGE2MjFlODQxMTU2MWM4YzhkMTc0MzI4ZTZkMGRlIn0=/amazon.jpg"
                             alt="Card image" style="width:100%">
                         <div class="card-body">
@@ -200,7 +200,7 @@
 
                         </div>
                     </div>
-                    <div class="card col-sm-12 col-md-3" style="width:500px ;margin-left: 30px;">
+                    <div class="card col-sm-10 col-md-3" style="width:500px ;margin-left: 30px;">
                         <img class="card-img-top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-select-2019-family?wid=882&amp;hei=1058&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1567022175704" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">iPhone 11</h4>
@@ -211,7 +211,7 @@
 
                         </div>
                     </div>
-                    <div class="card col-sm-12 col-md-3" style="width:400px ;margin-left: 30px;">
+                    <div class="card col-sm-10 col-md-3" style="width:400px ;margin-left: 30px;">
                         <img class="card-img-top" src="https://lp-cms-production.imgix.net/features/2017/08/shutterstock_611229743-bde2e023e33c.jpg?fit=max&w=800&q=40&sharp=10&vib=20" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">Switzerland trip</h4>
@@ -222,7 +222,7 @@
                     </div>
                 </div>
             </div>
-            <div id="taskPopUp" class="task animated slideInDown">
+            <div id="taskPopUp" class=" popup animated slideInDown">
                 <div id="taskData">
                     <div id="taskPopUpHeader">
                         <h1 id="taskDataTitle">Title</h1>
@@ -248,63 +248,98 @@
 
             </div>
         </div>
-        <footer id="plans">
-            <div class="row">
-                <div class="col span-1-of-2">
-                    <ul class="footer-nav">
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">iOS App</a></li>
-                        <li><a href="#">Android App</a></li>
-                    </ul>
-                </div>
-                <div class="col span-1-of-2">
-                    <ul class="social-links">
-                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-reddit-alien"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <p>
-                    Copyright &copy; 2019 by HELPME!.ORG. All rights reserved.
-                </p>
-            </div>
-        </footer>
-        <div id="sidebar" class="animated slideInLeft">
-            <div id="topofsidebar">
-                <div id="userprofile">
-                    <img id="profilephoto" src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200">
-                    <h3>Jetha bhai</h3>
-                </div>
-                <div id="profileoptions">
-                    <h5>Your score:</h5>
-                    <span class="yourscore">100</span> <i class='fas fa-award'></i>
-                    <br>
-                    <p>
-                        <i class='fas fa-bell' style='font-size:36px' class="container col-6"></i>
-                        <i class="fa fa-cog" style="font-size:36px;" class="container col-6"></i></p>
-                    <button class="btn btn-danger">Log out</button>
-                </div>
-            </div>
-            <ul id="optionlist">
-                <a href="#top" style="text-decoration: none;">
-                    <li id="l1"><i class="fa fa-home"></i> Home</li>
-                </a>
-                <li id="l2"><i class="fa fa-tasks"></i> Tasks</li>
-                <li id="l3"><i class="fa fa-plus-circle" class="animated pulse"></i> Add Task</li>
-                <li id="l4"><i class="fa fa-lightbulb-o"></i> Skills</li>
-                <li id="l5"><i class="fa fa-gift"></i> Rewards</li>
-                <li id="l6"><i class="fa fa-line-chart"></i> Leadersboard</li>
+        <div class=" popup animated slideInDown" id="formPopUp">
+            <div class="form" id="addTaskForm">
+                <span id="demo">demo</span>
+                <label for="titleForm">Title </label><br>
+                <input type="text" name="titleForm" id="titleForm" value="rewards">
+                <br>
+                <br>
+                <label for="companyForm">company </label><br>
+                <select name="companyForm" id="companyForm" value="company">
+                        <option value="Iris Media">Iris Media</option>
+                        <option value="TigerOne">TigerOne</option>
+                        <option value="Titus Tech">Titus Tech</option>
+                        <option value="other">
+                        other</option>                    </select>
+                <br>
+                <label for="detailsForm">details </label><br>
+                <input type="text" name="detailsForm" id="detailsForm" value="details">
+                <br>
+                <label for="skillsForm">skills </label><br>
+                <input type="text" name="skillsForm" id="skillsForm" value="skills">
+                <br>
+                <label for="rewardsForm">rewards </label><br>
+                <input type="number" name="rewardsForm" id="rewardsForm" value="rewards">
+                <br>
+                <label for="dateForm">date </label><br>
+                <input type="date" name="dateForm" id="dateForm" value="date">
+                <br>
 
-            </ul>
-            <p id="aboutus">About Us</p>
+            </div><br><br>
+
+            <input type="reset" value="Reset" class="reset" />
+
+            <button onclick="submitt()">uvuvuv</button>
+            <span onclick="closeForm()">X</span></div>
+    </div>
+    <footer id=" plans ">
+        <div class="row ">
+            <div class="col span-1-of-2 ">
+                <ul class="footer-nav ">
+                    <li><a href="# ">About us</a></li>
+                    <li><a href="# ">Blog</a></li>
+                    <li><a href="# ">Press</a></li>
+                    <li><a href="# ">iOS App</a></li>
+                    <li><a href="# ">Android App</a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2 ">
+                <ul class="social-links ">
+                    <li><a href="# "><i class="fa fa-facebook-square "></i></a></li>
+                    <li><a href="# "><i class="fa fa-twitter "></i></a></li>
+                    <li><a href="# "><i class="fa fa-google-plus "></i></a></li>
+                    <li><a href="# "><i class="fa fa-reddit-alien "></i></a></li>
+                </ul>
+            </div>
         </div>
+        <div class="row ">
+            <p>
+                Copyright &copy; 2019 by HELPME!.ORG. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <div id="sidebar" class="animated slideInUp">
+        <div id="topofsidebar">
+            <div id="userprofile">
+                <img id="profilephoto" src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200">
+                <h3>Jetha bhai</h3>
+            </div>
+            <div id="profileoptions">
+                <h5>Your score:</h5>
+                <span class="yourscore">100</span> <i class='fas fa-award'></i>
+                <br>
+                <p>
+                    <i class='fas fa-bell' style='font-size:36px' class="container col-6"></i>
+                    <i class="fa fa-cog" style="font-size:36px;" class="container col-6"></i></p>
+                <button class="btn btn-danger">Log out</button>
+            </div>
+        </div>
+        <ul id="optionlist">
+            <a href="#top" style="text-decoration: none;">
+                <li id="l1"><i class="fa fa-home"></i> Home</li>
+            </a>
+            <li id="l2"><i class="fa fa-tasks"></i> Tasks</li>
+            <li id="l3"><i class="fa fa-plus-circle" class="animated pulse"></i> Add Task</li>
+            <li id="l4"><i class="fa fa-lightbulb-o"></i> Skills</li>
+            <li id="l5"><i class="fa fa-gift"></i> Rewards</li>
+            <li id="l6"><i class="fa fa-line-chart"></i> Leadersboard</li>
 
-        <script src="script.js"></script>
+        </ul>
+        <p id="aboutus">About Us</p>
+    </div>
+
+    <script src="script.js "></script>
 </body>
 
 </html>

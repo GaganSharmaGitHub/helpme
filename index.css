@@ -18,7 +18,7 @@
  
  #titleandbtn h1 {
      width: fit-content;
-     font-size: 10vh;
+     font-size: 10vw;
      padding: 10px 10px 10px 10px;
      color: rgb(10, 10, 10);
      mix-blend-mode: screen;
@@ -83,7 +83,7 @@
  
  #stickytop h1 {
      display: inline-block;
-     font-size: 10vh;
+     font-size: 5vw;
      width: fit-content;
      padding: 10px 10px 10px 10px;
      font-family: 'Comfortaa', cursive;
@@ -111,7 +111,7 @@
      color: white;
      position: fixed;
      display: none;
-     top: 15vh;
+     top: 10vw;
      z-index: 70;
      transition: 1s;
      padding-left: 1px;
@@ -272,12 +272,17 @@
      transition: color 0.2s;
  }
  
- @media only screen and (max-width:1000px) {
+ @media only screen and (max-width:700px) {
      #profilecard {
          display: none;
      }
      #sidebar {
          width: 100%;
+         top: 10vh;
+     }
+     #stickytop h1 {
+         display: inline-block;
+         font-size: 10vw;
      }
  }
  
@@ -303,17 +308,18 @@
      margin-top: 20px;
  }
  
- .task {
-     z-index: 1;
+ .popup {
+     z-index: 50;
      height: 80vh;
-     width: 90%;
-     margin: 100px 50px 50px 50px;
+     width: 90vw;
+     margin: 100px 5vw 50px 5vw;
      background-color: rgb(201, 201, 201);
      border: black solid thin;
      position: fixed;
      top: 0px;
      left: 0px;
      overflow: scroll;
+     display: none;
  }
  
  .close {
