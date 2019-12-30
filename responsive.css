@@ -1,0 +1,58 @@
+@media only screen and (max-width:600px) {
+    #profilecard {
+        display: none;
+    }
+    #sidebar {
+        max-width: 100%;
+        top: 0vh;
+    }
+    #stickytop h1 {
+        display: inline-block;
+        font-size: 10vw;
+    }
+}
+
+@media only screen and (min-width:600px && max-width:700px) {
+    #profilecard {
+        display: none;
+    }
+    #sidebar {
+        top: 0vw;
+        width: 300px;
+    }
+    #stickytop h1 {
+        display: inline-block;
+        font-size: 10vw;
+    }
+}
+
+@media only screen and (min-width:700px && max-width:800px) {
+    #profilecard {
+        display: block;
+    }
+    #sidebar {
+        width: 100%;
+        top: 0px;
+        max-width: 300px;
+    }
+    #stickytop h1 {
+        display: inline-block;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width:800px) {
+    #profilecard {
+        display: block;
+    }
+    #sidebar {
+        width: 100%;
+        top: 0px;
+        max-width: 300px;
+    }
+    #stickytop h1 {
+        display: inline-block;
+        font-size: 15px;
+        max-height: 30px;
+    }
+}

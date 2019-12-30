@@ -19,120 +19,95 @@
 </head>
 
 <body>
+    <div id="aboveAll" class="animated">
+        <h1 id="title2" class="animated fadeInLeft">HelpMe.org</h1>
+        <div class="tab-content">
+            <ul class="nav nav-tabs">
+                <li class="active"><a class="active" data-toggle="tab" href="#signIn2">Log in</a></li>
+                <li><a data-toggle="tab" href="#signUp2">Sign Up</a></li>
+            </ul>
+
+            <div id="signIn2" class="tab-pane active">
+                <h3>Log in</h3>
+                <br>
+                <span id="signIn2Warning"></span>
+                <label for="signIn2Id">Id</label> <input type="number" name="" id="signIn2Id"><br>
+                <label for="signIn2Password">Password</label> <input type="password" name="" id="signIn2Password"><br>
+
+                <i class="fa fa-eye" style="font-size: 20px;" onclick="showPassword('signIn2Password')"></i>Show password<br>
+                <button class="btn btn-primary" onclick="signIn2()" type="button">Log in</button>
+
+            </div>
+            <div id="signUp2" class="tab-pane fade">
+                <h3>Sign Up</h3>
+                <label for="signUp2Name">Name</label> <input type="text" name="name" id="signUp2Name"><br>
+                <label for="signUp2Password">Password</label> <input type="text" name="" id="signUp2Password"><br>
+                <i class="fa fa-eye" style="font-size: 20px;" onclick="showPassword('signUp2Password')"></i>Show password<br>
+                <label for="signUp2Image">Image</label> <input type="text" name="" id="signUp2Image"><br>
+                <button class="btn btn-primary" onclick="signUp2()">Register</button>
+            </div>
+        </div>
+
+    </div>
+
     <div id="stickytop" class="animated fadeInDown">
         <div class="container" class="animated rubberBand" style="width: 5vw;" onclick="menuicon(this)" onclick="opennv()">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <h1>HelpMe.org</h1>
+        <h1>HelpMe.org</h1> <i class="fa fa-user-circle-o" id="openUserButton" onclick="popUp('profile')" aria-hidden="true"></i>
     </div>
     <div id="wholebody">
-        <div id="header">
-            <a id="top"></a>
-            <div id="headeropa">
-                <div id="titleandbtn" class="col-lg-7 container-fluid col-md-12">
-                    <h1 id="title" class="animated fadeInLeft">HelpMe.org</h1>
-                    <h3 class="animated fadeInRight">Strong community of passionate individuals.</h3>
-                    <a href="#task">
-                        <button class="mainbtn"><i class="fa fa-tasks"></i> Tasks</button></a>
+        <div>
+            <div id="header">
+                <a id="top"></a>
+                <div id="headeropa">
+                    <div id="titleandbtn" class="col-lg-7 container-fluid col-md-12">
+                        <h1 id="title" class="animated fadeInLeft">HelpMe.org</h1>
+                        <h3 class="animated fadeInRight">Strong community of passionate individuals.</h3>
+                        <a href="#task">
+                            <button class="mainbtn"><i class="fa fa-tasks"></i> Tasks</button></a>
 
-                    <button class="mainbtn" onclick="formPopUp()">
+                        <button class="mainbtn" onclick="popUp('formPopUp')">
 
                     <i class="fa fa-plus-circle" class="animated pulse"></i> Add Task</button>
-                    <a href="#skills" style="text-decoration: none;">
-                        <button class="mainbtn">
+                        <a href="#skills" style="text-decoration: none;">
+                            <button class="mainbtn">
                 <i class="fa fa-lightbulb-o"></i> Skills</button></a>
-                    <br>
-                    <a href="#rewards" style="text-decoration: none;"><button class="mainbtn"><i class="fa fa-gift"></i> Rewards</button>
+                        <br>
+                        <a href="#rewards" style="text-decoration: none;"><button class="mainbtn"><i class="fa fa-gift"></i> Rewards</button>
                 </a><button class="mainbtn"><i class="fa fa-line-chart"></i> Leadersboard</button>
-                </div>
-                <div class="container-fluid col-lg-4" id="profilecard">
-                    <div class="card" style="width:400px">
-                        <img class="card-img-top" height="300px" src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Jetha Bhai</h4>
-                            <p class="card-text">Welcome to Helpme.org!</p>
-                            <div id="profileoptions">
-                                <h5>Your score:</h5>
-                                100 <i class='fas fa-award'></i>
-                                <br>
-                                <p>
-                                    <i class='fas fa-bell' style='font-size:36px' class="container col-6"></i>
-                                    <i class="fa fa-cog" style="font-size:36px;" class="container col-6"></i></p>
-                                <button class="btn btn-danger">Log out</button>
-                                <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+                    </div>
+                    <div id="profile" class="animated slideInDown">
+
+                        <div class="card" id="loggedIn">
+                            <span class="close" onclick="closed('profile')">X</span>
+                            <img class="card-img-top" alt="Card image cap" id="profileCardImage" src="https://images.unsplash.com/photo-1508138221679-760a23a2285b">
+                            <div class="card-body">
+                                <h5 class="card-title" id="profileCardUsername">UserName</h5>
+                                <p class="card-text">Welcome back!<br>
+                                    <b>Your score:</b><br>
+                                    <span id="yourscore">00</span> <i class="fas fa-award"></i><br></p>
+                                <span id="profileOptions">
+                                <i class="fa fa-cog" aria-hidden="true"></i><i class="fa cal fa-calendar-check-o" aria-hidden="true" onclick="expandAppliedList()"></i>
+                                <i class="fa fa-gift" onclick="expandClaimedList()" aria-hidden="true"></i></span><br>
+                                <a class="btn btn-danger" onclick="switchProfile()">LogOut</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
+
         </div>
+
 
         <br><br><br><br><br>
         <a id="task"></a>
         <h2>Tasks</h2>
         <div id="tasks" class="container">
             <div class="row" id="postParent">
-                <div class="card col-sm-10 col-md-3">
-                    <img class="card-img-top" src="res/Iris Media.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Graphics Design</h4>
-                        <p class="card-text">Iris Media </p>
-                        <a style="text-decoration: none;" class="btn btn-primary">
-                            <ion-icon name="log-in"></ion-icon>Apply</a>
-                        <a class="btn btn-primary">
-                            <ion-icon name="share"></ion-icon>Share</a>
-                        <a onclick="expand(0)" class="btn btn-primary">
-                            <ion-icon class="fa fa-info-circle"></ion-icon>Details</a>
-                    </div>
-                </div>
-                <div class="card col-sm-10 col-md-3" style="width:500px; margin-left: 30px;">
-                    <img class="card-img-top" src="res/Titus Tech.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Testing</h4>
-                        <p class="card-text">Titus Technical </p>
-                        <a href="#" class="btn btn-primary">
-                            <ion-icon name="log-in"></ion-icon>Apply</a>
-                        <a href="#" class="btn btn-primary">
-                            <ion-icon name="share"></ion-icon>Share</a>
-                        <a class="btn btn-primary" onclick="expand(1)">
-                            <ion-icon name="information-circle-outline"></ion-icon>Details</a>
 
-                    </div>
-                </div>
-                <div class="card col-sm-10 col-md-3" style="width:400px; margin-left: 30px;">
-                    <img class="card-img-top" src="res/TigerOne.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">C# coding</h4>
-                        <p class="card-text">Tiger ONE </p>
-                        <a href="#" class="btn btn-primary">
-                            <ion-icon name="log-in"></ion-icon>Apply</a>
-                        <a href="#" class="btn btn-primary">
-                            <ion-icon name="share"></ion-icon>Share</a>
-                        <a class="btn btn-primary" onclick="expand(2)">
-                            <ion-icon name="information-circle-outline"></ion-icon>Details</a>
-
-                    </div>
-                </div>
-
-
-
-                <div class="card col-sm-10 col-md-3" style="width:400px; margin-left: 30px;">
-                    <img class="card-img-top" src="res/Titus Tech.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Python Debugging</h4>
-                        <p class="card-text">Titus Technical </p>
-                        <a href="#" class="btn btn-primary">
-                            <ion-icon name="log-in"></ion-icon>Apply</a>
-                        <a href="#" class="btn btn-primary">
-                            <ion-icon name="share"></ion-icon>Share</a>
-                        <a class="btn btn-primary" onclick="expand(3)">
-                            <ion-icon name="information-circle-outline"></ion-icon>Details</a>
-
-                    </div>
-                </div>
             </div>
         </div>
         <br>
@@ -188,100 +163,104 @@
             <h2>Rewards</h2>
             <a id="rewards"></a>
             <div class="container">
-                <div class="row">
-                    <div class="card col-sm-10 col-md-3" style="width:500px; margin-left: 30px;">
-                        <img class="card-img-top" src="https://img.maximummedia.ie/her_ie/eyJkYXRhIjoie1widXJsXCI6XCJodHRwOlxcXC9cXFwvbWVkaWEtaGVyLm1heGltdW1tZWRpYS5pZS5zMy5hbWF6b25hd3MuY29tXFxcL3dwLWNvbnRlbnRcXFwvdXBsb2Fkc1xcXC8yMDE1XFxcLzA4XFxcLzA2MTUzOTM0XFxcL2FtYXpvbi5qcGdcIixcIndpZHRoXCI6NjQwLFwiaGVpZ2h0XCI6MzYwLFwiZGVmYXVsdFwiOlwiaHR0cHM6XFxcL1xcXC93d3cuaGVyLmllXFxcL2Fzc2V0c1xcXC9pbWFnZXNcXFwvaGVyXFxcL25vLWltYWdlLnBuZz9pZD1iNmY4NGQ2MjdiNDExNGYwMGY1MFwiLFwib3B0aW9uc1wiOltdfSIsImhhc2giOiJiZjViODNhNzFhZGE2MjFlODQxMTU2MWM4YzhkMTc0MzI4ZTZkMGRlIn0=/amazon.jpg"
-                            alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Amazon $20 coupon</h4>
-                            <p class="card-text">Available now </p>
-                            <a href="#" class="btn btn-primary">
-                                <ion-icon name="log-in"></ion-icon>Claim for 120<i class='fas fa-award'></i></a>
-
-                        </div>
-                    </div>
-                    <div class="card col-sm-10 col-md-3" style="width:500px ;margin-left: 30px;">
-                        <img class="card-img-top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-select-2019-family?wid=882&amp;hei=1058&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1567022175704" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">iPhone 11</h4>
-                            <p class="card-text">Available now </p>
-                            <a href="#" class="btn btn-primary">
-                                <ion-icon name="log-in"></ion-icon>Claim for 120000<i class='fas fa-award'></i></a>
-
-
-                        </div>
-                    </div>
-                    <div class="card col-sm-10 col-md-3" style="width:400px ;margin-left: 30px;">
-                        <img class="card-img-top" src="https://lp-cms-production.imgix.net/features/2017/08/shutterstock_611229743-bde2e023e33c.jpg?fit=max&w=800&q=40&sharp=10&vib=20" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Switzerland trip</h4>
-                            <p class="card-text">Available now </p>
-                            <a href="#" class="btn btn-primary">
-                                <ion-icon name="log-in"></ion-icon>Claim for 30M<i class='fas fa-award'></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="taskPopUp" class=" popup animated slideInDown">
-                <div id="taskData">
-                    <div id="taskPopUpHeader">
-                        <h1 id="taskDataTitle">Title</h1>
-                        <button class="btn btn-primary">Apply</button>
-                        <span class="close" onclick="closed(0)">X</span>
-
-                    </div>
-                    <div id="imageAndMainData">
-                        <p id="mainData">
-                            <b>Company:</b><span id="taskDataCompany">Company</span><br>
-                            <b>Skills:</b>
-                            <span id="taskDataSkills">Skills</span><br> <b>Reward:</b>
-                            <span id="taskDataReward">Reward</span><i class='fas fa-award'></i><br><b> Date:</b>
-                            <span id="taskDataDate">Date</span><br></p>
-                        <div id="companyImageDiv"><img id="companyImage"></div>
-                    </div>
-                    <div>
-                        <b>Description:</b><br>
-                        <p id="taskDataDetails">Details</p>
-                    </div>
+                <div class="row" id="rewardParent">
 
                 </div>
-
             </div>
         </div>
-        <div class=" popup animated slideInDown" id="formPopUp">
-            <div class="form" id="addTaskForm">
-                <span id="demo">demo</span>
-                <label for="titleForm">Title </label><br>
-                <input type="text" name="titleForm" id="titleForm" value="rewards">
-                <br>
-                <br>
-                <label for="companyForm">company </label><br>
-                <select name="companyForm" id="companyForm" value="company">
+    </div>
+    <div id="taskPopUp" class=" popup animated slideInDown">
+        <div id="taskData">
+            <div id="taskPopUpHeader">
+                <h1 id="taskDataTitle">Title</h1>
+                <button class="btn btn-primary" id="taskExpandPopApply">Apply</button>
+                <span class="close" onclick="closed('taskPopUp')">X</span>
+
+            </div>
+            <div id="imageAndMainData">
+                <p id="mainData">
+                    <b>Company:</b><span id="taskDataCompany">Company</span><br>
+                    <b>Skills:</b>
+                    <span id="taskDataSkills">Skills</span><br> <b>Reward:</b>
+                    <span id="taskDataReward">Reward</span><i class='fas fa-award'></i><br><b> Date:</b>
+                    <span id="taskDataDate">Date</span><br></p>
+                <div id="companyImageDiv"><img id="companyImage"></div>
+            </div>
+            <div>
+                <b>Description:</b><br>
+                <p id="taskDataDetails">Details</p>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    <div class=" popup animated slideInDown" id="appliedPopUp">
+        <span class="close" onclick="closed('appliedPopUp')">X</span>
+
+        <div class="appliedTask">
+            <img class="appliedImage" src="res/other.png">
+            <div class="appliedTaskText">
+                <span class="appliedTaskTitle">Title</span>
+                <span class="appliedTaskReward">Reward<i class='fas fa-award'></i></span>
+                <span class="appliedTaskCompany">Company</span>
+                <span class="appliedTaskDate">Date</span>
+                <span class="btn btn-primary appliedTaskButton"> <i class="fa fa-info-circle" aria-hidden="true"></i> Details</span>
+            </div>
+        </div>
+
+
+    </div>
+    <div class=" popup animated slideInDown" id="claimedPopUp">
+        <span class="close" onclick="closed('claimedPopUp')">X</span>
+
+        <div class="claimedReward">
+            <img class="rewardImage" src="res/other.png">
+            <div class="claimedRewardText">
+                <span class="claimedRewardTitle">Title</span>
+                <span class="claimedRewardCost">Reward<i class='fas fa-award'></i></span>
+                <span class="btn btn-primary claimedLinkButton"> <i class="fa fa-info-circle" aria-hidden="true"></i> Redeem</span>
+            </div>
+        </div>
+
+
+    </div>
+    <div class=" popup animated slideInDown" id="formPopUp">
+        <div class="form" id="addTaskForm">
+            <br><br>
+            <div style="display: inline-block;width: 100%; max-width: 600px;">
+                <input autocomplete="off" type="text" name="titleForm" id="titleForm" placeholder="Type Title">
+                <label class="textFormLabel" for="titleForm">Title </label><br>
+                <label for="companyForm">Company </label><br>
+                <select name="companyForm" id="companyForm">
+
                         <option value="Iris Media">Iris Media</option>
                         <option value="TigerOne">TigerOne</option>
                         <option value="Titus Tech">Titus Tech</option>
-                        <option value="other">
-                        other</option>                    </select>
+                        <option value="other">other</option>                    </select>
+
                 <br>
-                <label for="detailsForm">details </label><br>
-                <input type="text" name="detailsForm" id="detailsForm" value="details">
-                <br>
-                <label for="skillsForm">skills </label><br>
-                <input type="text" name="skillsForm" id="skillsForm" value="skills">
-                <br>
-                <label for="rewardsForm">rewards </label><br>
-                <input type="number" name="rewardsForm" id="rewardsForm" value="rewards">
-                <br>
-                <label for="dateForm">date </label><br>
-                <input type="date" name="dateForm" id="dateForm" value="date">
                 <br>
 
-            </div><br><br>
+                <input autocomplete="off" type="text" name="detailsForm" id="detailsForm" placeholder="Type Details">
 
-            <input type="reset" value="Reset" class="reset" />
+                <label for="detailsForm" class="textFormLabel">details </label><br>
 
-            <button onclick="submitt()">uvuvuv</button>
-            <span onclick="closeForm()">X</span></div>
+                <input autocomplete="off" type="text" name="skillsForm" id="skillsForm" placeholder="Type Skills">
+
+                <label for="skillsForm" class="textFormLabel">skills </label><br>
+
+                <input autocomplete="off" type="number" name="rewardsForm" id="rewardsForm" placeholder="Type Rewards">
+                <label for="rewardsForm" class="textFormLabel">rewards </label>
+                <BR>
+                <label for="dateForm">Date </label>
+                <input autocomplete="off" type="date" name="dateForm" id="dateForm">
+            </div>
+            <span>
+                <button class="btn btn-primary" onclick="submitt()">Submit</button>
+                <button class="btn btn-danger" onclick="closed('formPopUp')">Cancel</button></span>
+        </div>
+
     </div>
     <footer id=" plans ">
         <div class="row ">
@@ -311,18 +290,17 @@
     </footer>
     <div id="sidebar" class="animated slideInUp">
         <div id="topofsidebar">
-            <div id="userprofile">
-                <img id="profilephoto" src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200">
-                <h3>Jetha bhai</h3>
-            </div>
-            <div id="profileoptions">
-                <h5>Your score:</h5>
-                <span class="yourscore">100</span> <i class='fas fa-award'></i>
+            <img id="sidebarProfileImage">
+            <div id="sideProfilepara">
+                <h4>Welcome <span id="sidebarProfileUsername">Gagan</span></h4>
+                <h5 id="labelforyourscore2">Your score:</h5>
+                <span id="yourscore2">100</span> <i class='fas fa-award'></i>
                 <br>
-                <p>
-                    <i class='fas fa-bell' style='font-size:36px' class="container col-6"></i>
-                    <i class="fa fa-cog" style="font-size:36px;" class="container col-6"></i></p>
-                <button class="btn btn-danger">Log out</button>
+                <p id="iconFlex">
+                    <i class="fa fa-cog" aria-hidden="true"></i><i class="fa cal fa-calendar-check-o" aria-hidden="true" onclick="expandAppliedList()"></i>
+                    <i class="fa fa-gift" onclick="expandClaimedList()" aria-hidden="true"></i></span><br>
+                </p>
+                <button class="btn btn-danger" onclick="popUp('profile')">Switch profile</button>
             </div>
         </div>
         <ul id="optionlist">
@@ -330,7 +308,7 @@
                 <li id="l1"><i class="fa fa-home"></i> Home</li>
             </a>
             <li id="l2"><i class="fa fa-tasks"></i> Tasks</li>
-            <li id="l3"><i class="fa fa-plus-circle" class="animated pulse"></i> Add Task</li>
+            <li id="l3" onclick="popUp('formPopUp')"><i class="fa fa-plus-circle" class="animated pulse"></i> Add Task</li>
             <li id="l4"><i class="fa fa-lightbulb-o"></i> Skills</li>
             <li id="l5"><i class="fa fa-gift"></i> Rewards</li>
             <li id="l6"><i class="fa fa-line-chart"></i> Leadersboard</li>

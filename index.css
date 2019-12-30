@@ -1,383 +1,729 @@
- html {
-     scroll-behavior: smooth;
- }
- 
- #header {
-     background-image: url(https://images.unsplash.com/photo-1461532257246-777de18cd58b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80);
-     width: 100%;
-     height: 100vh;
-     background-size: cover;
-     animation: headerchange 20s infinite;
- }
- 
- #headeropa {
-     background-color: rgba(10, 10, 10, 0.336);
-     width: 100%;
-     height: 100vh;
- }
- 
- #titleandbtn h1 {
-     width: fit-content;
-     font-size: 10vw;
-     padding: 10px 10px 10px 10px;
-     color: rgb(10, 10, 10);
-     mix-blend-mode: screen;
-     font-family: 'Comfortaa', cursive;
-     background-color: white;
- }
- 
- .mainbtn i {
-     transition: 1s;
-     display: none;
- }
- 
- #tasks {
-     z-index: 1;
-     width: 100%;
- }
- 
- #titleandbtn h3 {
-     color: white;
-     width: fit-content;
-     padding: 7px 7px 7px 7px;
-     background-color: #fc5c65;
-     margin-bottom: 30px;
- }
- 
- #titleandbtn {
-     position: absolute;
-     top: 30%;
- }
- 
- #profilecard {
-     float: right;
- }
- 
- .mainbtn {
-     background-color: #fa813100;
-     margin: 5px 15px 5px 5px;
-     padding: 2px 5px 5px 5px;
-     color: rgb(255, 255, 255);
-     border: solid 2px white;
-     border-radius: 20%;
-     font-size: 5vh;
-     cursor: pointer;
-     display: inline-block;
-     width: fit-content;
-     transition: 1s;
-     ;
- }
- 
- #stickytop .container {}
- 
- #stickytop {
-     box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-     z-index: 40;
-     height: fit-content;
-     width: 100%;
-     background-color: white;
-     position: fixed;
-     top: 0px;
-     display: none;
- }
- 
- #stickytop h1 {
-     display: inline-block;
-     font-size: 5vw;
-     width: fit-content;
-     padding: 10px 10px 10px 10px;
-     font-family: 'Comfortaa', cursive;
-     background-color: rgb(255, 253, 253);
- }
- 
- .mainbtn:hover {
-     cursor: pointer;
-     transition: 1s;
-     background-color: white;
-     color: #f53737;
-     transition: 1s;
-     border-color: #f53737;
- }
- 
- body {
-     height: 2000px;
- }
- 
- #sidebar {
-     width: 300px;
-     height: 100vh;
-     overflow: auto;
-     background-color: rgb(82, 82, 82);
-     color: white;
-     position: fixed;
-     display: none;
-     top: 10vw;
-     z-index: 70;
-     transition: 1s;
-     padding-left: 1px;
- }
- 
- #userprofile {
-     overflow: hidden;
-     height: 30%;
-     width: 50%;
-     display: inline-block;
- }
- 
- #userprofile h3 {
-     width: 50%;
-     position: absolute;
-     top: 140px;
-     background-color: rgba(34, 33, 33, 0.856);
- }
- 
- #profilephoto {
-     width: 100%;
-     height: 180px;
- }
- 
- #profileoptions {
-     transform: translateY(-20px);
-     width: 40%;
-     text-align: center;
-     display: inline-block;
- }
- 
- #profileoptions p i {
-     margin: 5px 15px 5px 5px;
- }
- 
- #topofsidebar {
-     overflow: hidden;
- }
- 
- #optionlist li i {
-     display: none;
- }
- 
- #optionlist {
-     overflow: hidden;
-     margin-left: 0px;
-     list-style: none;
- }
- 
- #optionlist li {
-     transform: translateX(-40px);
-     font-size: 3.5vh;
-     padding: 5px 5px 5px 5px;
-     height: fit-content;
-     color: rgb(197, 197, 197);
-     cursor: pointer;
-     transition: ease;
- }
- 
- #optionlist li:hover {
-     margin-left: 20px;
-     ;
-     color: white;
-     font-size: 4.5vh;
-     transition: 1s;
- }
- 
- #aboutus {
-     width: 100%;
-     ;
-     cursor: pointer;
-     padding-bottom: 10px;
-     text-align: center;
- }
- 
- a:link {
-     color: white;
-     text-decoration: none;
- }
- 
- #l1 {
-     border-left: solid 10px violet;
- }
- 
- #l2 {
-     border-left: solid 10px blue;
- }
- 
- #l3 {
-     border-left: solid 10px green;
- }
- 
- #l4 {
-     border-left: solid 10px yellow;
- }
- 
- #l5 {
-     border-left: solid 10px rgb(255, 136, 0);
- }
- 
- #l6 {
-     border-left: solid 10px red;
- }
- 
- footer {
-     background-color: #333;
-     padding: 50px;
-     font-size: 80%;
- }
- 
- .footer-nav {
-     list-style: none;
-     float: left;
- }
- 
- .social-links {
-     list-style: none;
-     float: right;
- }
- 
- .footer-nav li,
- .social-links li {
-     display: inline-block;
-     margin-right: 20px;
- }
- 
- .footer-nav li:last-child,
- .social-links li:last-child {
-     margin-right: 0;
- }
- 
- .footer-nav li a:link,
- .footer-nav li a:visited,
- .social-links li a:link,
- .social-links li a:visited {
-     text-decoration: none;
-     border: 0;
-     color: #888;
-     -webkit-transition: color 0.2s;
-     transition: color 0.2s;
- }
- 
- .footer-nav li a:hover,
- .footer-nav li a:active {
-     color: #ddd;
- }
- 
- .social-links li a:link,
- .social-links li a:visited {
-     font-size: 160%;
- }
- 
- .ion-social-facebook,
- .ion-social-twitter,
- .ion-social-googleplus,
- .ion-social-instagram {
-     -webkit-transition: color 0.2s;
-     transition: color 0.2s;
- }
- 
- @media only screen and (max-width:700px) {
-     #profilecard {
+     html {
+         scroll-behavior: smooth;
+     }
+     
+     body {
+         max-width: 100vw;
+         height: fit-content;
+     }
+     
+     #wholebody {
+         display: none
+     }
+     /*header*/
+     
+     #header {
+         background-image: url(https://images.unsplash.com/photo-1461532257246-777de18cd58b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80);
+         width: 100%;
+         min-height: 100vh;
+         height: fit-content;
+         background-size: cover;
+         animation: headerchange 20s infinite;
+     }
+     
+     #headeropa {
+         background-color: rgba(10, 10, 10, 0.336);
+         width: 100%;
+         min-height: 100vh;
+         height: fit-content;
+     }
+     
+     #titleandbtn h1 {
+         width: fit-content;
+         font-size: 10vw;
+         padding: 10px 10px 10px 10px;
+         color: rgb(10, 10, 10);
+         mix-blend-mode: screen;
+         font-family: 'Comfortaa', cursive;
+         background-color: white;
+     }
+     
+     .mainbtn i {
+         transition: 1s;
          display: none;
      }
-     #sidebar {
-         width: 100%;
-         top: 10vh;
+     
+     #titleandbtn h3 {
+         color: white;
+         width: fit-content;
+         padding: 7px 7px 7px 7px;
+         background-color: #fc5c65;
+         margin-bottom: 30px;
      }
+     
+     #titleandbtn {
+         position: absolute;
+         top: 30%;
+     }
+     
+     .mainbtn {
+         background-color: #fa813100;
+         margin: 5px 15px 5px 5px;
+         padding: 2px 5px 5px 5px;
+         color: rgb(255, 255, 255);
+         border: solid 2px white;
+         border-radius: 20%;
+         font-size: 40px;
+         cursor: pointer;
+         display: inline-block;
+         width: fit-content;
+         transition: 1s;
+         ;
+     }
+     
+     .mainbtn:hover {
+         cursor: pointer;
+         transition: 1s;
+         background-color: white;
+         color: #f53737;
+         transition: 1s;
+         border-color: #f53737;
+     }
+     /*stickytop*/
+     
+     #stickytop i {
+         float: right;
+         transform: translate(-15px, 15px);
+         cursor: pointer;
+     }
+     
+     #stickytop {
+         box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+         z-index: 40;
+         height: fit-content;
+         width: 100%;
+         background-color: white;
+         position: fixed;
+         top: 0px;
+         max-height: 80px;
+         overflow: hidden;
+         display: none;
+     }
+     
      #stickytop h1 {
          display: inline-block;
-         font-size: 10vw;
+         width: fit-content;
+         padding: 0px 10px 10px 10px;
+         font-family: 'Comfortaa', cursive;
+         background-color: rgb(255, 253, 253);
      }
- }
- 
- .ion-social-facebook:hover {
-     color: #3b5998;
- }
- 
- .ion-social-twitter:hover {
-     color: #00aced;
- }
- 
- .ion-social-googleplus:hover {
-     color: #dd4b39;
- }
- 
- .ion-social-instagram:hover {
-     color: #517fa4;
- }
- 
- footer p {
-     color: #888;
-     text-align: center;
-     margin-top: 20px;
- }
- 
- .popup {
-     z-index: 50;
-     height: 80vh;
-     width: 90vw;
-     margin: 100px 5vw 50px 5vw;
-     background-color: rgb(201, 201, 201);
-     border: black solid thin;
-     position: fixed;
-     top: 0px;
-     left: 0px;
-     overflow: scroll;
-     display: none;
- }
- 
- .close {
-     cursor: pointer;
-     font-size: 100%;
-     flex-grow: 1;
- }
- 
- #companyImageDiv {
-     width: 40%;
-     justify-content: center;
-     display: inline-flex;
-     overflow: hidden;
-     height: 100%;
-     max-width: 300px;
- }
- 
- #companyImage {
-     width: 80%;
-     max-width: 200px;
- }
- 
- #taskData {
-     font-size: x-large;
-     width: 100%;
-     margin-left: 5px;
- }
- 
- #taskPopUpHeader {
-     display: flex;
- }
- 
- #taskPopUpHeader button {
-     max-height: 60px;
- }
- 
- #taskDataTitle {
-     font-size: 8vw;
-     overflow: hidden;
-     flex-grow: 8;
-     display: inline-block;
- }
- 
- #taskDataDetails {
-     display: block;
-     width: 100%;
- }
- 
- #imageAndMainData {
-     overflow: hidden;
-     display: flexbox;
- }
- 
- #mainData {
-     display: inline-block;
-     width: 50%;
-     height: 100%;
-     min-width: 250px;
-     min-width: 350px;
-     padding-left: 50px;
- }
+     /*sidebar*/
+     
+     #sidebar {
+         height: 100vh;
+         overflow: hidden;
+         padding-top: 80px;
+         background-color: rgb(82, 82, 82);
+         color: white;
+         position: fixed;
+         display: none;
+         top: 0px;
+         z-index: 10;
+         transition: 1s;
+         padding-left: 1px;
+         max-width: 350px;
+         width: 100%;
+     }
+     
+     #optionlist li i {
+         display: none;
+     }
+     
+     #optionlist {
+         overflow: hidden;
+         margin-left: 0px;
+         list-style: none;
+     }
+     
+     #optionlist li {
+         transform: translateX(-40px);
+         font-size: 3.5vh;
+         padding: 5px 5px 5px 5px;
+         height: fit-content;
+         color: rgb(197, 197, 197);
+         cursor: pointer;
+         transition: ease;
+     }
+     
+     #optionlist li:hover {
+         margin-left: 20px;
+         ;
+         color: white;
+         font-size: 4.5vh;
+         transition: 1s;
+     }
+     
+     #aboutus {
+         width: 100%;
+         ;
+         cursor: pointer;
+         padding-bottom: 10px;
+         text-align: center;
+     }
+     
+     a:link {
+         color: white;
+         text-decoration: none;
+     }
+     
+     .btn {
+         color: white;
+     }
+     
+     #l1 {
+         border-left: solid 10px violet;
+     }
+     
+     #l2 {
+         border-left: solid 10px blue;
+     }
+     
+     #l3 {
+         border-left: solid 10px green;
+     }
+     
+     #l4 {
+         border-left: solid 10px yellow;
+     }
+     
+     #l5 {
+         border-left: solid 10px rgb(255, 136, 0);
+     }
+     
+     #l6 {
+         border-left: solid 10px red;
+     }
+     /*topofsidebar*/
+     
+     #topofsidebar {
+         overflow: hidden;
+         width: 100%;
+         height: 200px;
+     }
+     
+     #labelforyourscore2 {
+         display: inline-block;
+     }
+     
+     #yourscore2 {
+         display: inline-block;
+     }
+     
+     #sidebarProfileImage {
+         height: 150px;
+         width: 40%;
+         display: block;
+         float: left;
+     }
+     
+     #iconFlex {
+         display: flex;
+         justify-content: space-around;
+         width: 100%;
+     }
+     
+     #sideProfilepara {
+         width: 50%;
+         display: block;
+         overflow: hidden;
+         padding-left: 10px;
+         float: left;
+     }
+     /*footer*/
+     
+     footer {
+         background-color: #333;
+         padding: 50px;
+         font-size: 80%;
+     }
+     
+     .footer-nav {
+         list-style: none;
+         float: left;
+     }
+     
+     .social-links {
+         list-style: none;
+         float: right;
+     }
+     
+     .footer-nav li,
+     .social-links li {
+         display: inline-block;
+         margin-right: 20px;
+     }
+     
+     .footer-nav li:last-child,
+     .social-links li:last-child {
+         margin-right: 0;
+     }
+     
+     .footer-nav li a:link,
+     .footer-nav li a:visited,
+     .social-links li a:link,
+     .social-links li a:visited {
+         text-decoration: none;
+         border: 0;
+         color: #888;
+         -webkit-transition: color 0.2s;
+         transition: color 0.2s;
+     }
+     
+     .footer-nav li a:hover,
+     .footer-nav li a:active {
+         color: #ddd;
+     }
+     
+     .social-links li a:link,
+     .social-links li a:visited {
+         font-size: 160%;
+     }
+     
+     .ion-social-facebook,
+     .ion-social-twitter,
+     .ion-social-googleplus,
+     .ion-social-instagram {
+         -webkit-transition: color 0.2s;
+         transition: color 0.2s;
+     }
+     
+     .ion-social-facebook:hover {
+         color: #3b5998;
+     }
+     
+     .ion-social-twitter:hover {
+         color: #00aced;
+     }
+     
+     .ion-social-googleplus:hover {
+         color: #dd4b39;
+     }
+     
+     .ion-social-instagram:hover {
+         color: #517fa4;
+     }
+     
+     footer p {
+         color: #888;
+         text-align: center;
+         margin-top: 20px;
+     }
+     /*popup*/
+     
+     .popup {
+         z-index: 50;
+         height: fit-content;
+         max-height: 800px;
+         width: 90vw;
+         margin: 100px 5vw 50px 5vw;
+         background-color: rgb(201, 201, 201);
+         border: black solid thin;
+         position: fixed;
+         top: 0px;
+         padding: 10px 10px 10px 10px;
+         left: 0px;
+         overflow: scroll;
+         display: none;
+     }
+     
+     i.fa {
+         font-size: xx-large;
+     }
+     
+     .close {
+         cursor: pointer;
+         font-size: 100%;
+         flex-grow: 1;
+     }
+     
+     #tasks {
+         z-index: 1;
+         width: 100%;
+     }
+     /*Taskdetailpopup*/
+     
+     #companyImageDiv {
+         width: 40%;
+         justify-content: center;
+         display: inline-flex;
+         overflow: hidden;
+         height: 100%;
+         max-width: 300px;
+     }
+     
+     #companyImage {
+         width: 80%;
+         max-width: 200px;
+     }
+     
+     #taskData {
+         font-size: x-large;
+         width: 100%;
+         margin-left: 5px;
+     }
+     
+     #taskPopUpHeader {
+         display: flex;
+     }
+     
+     #taskPopUpHeader button {
+         max-height: 60px;
+     }
+     
+     #taskDataTitle {
+         font-size: 8vw;
+         overflow: hidden;
+         flex-grow: 8;
+         display: inline-block;
+     }
+     
+     #taskDataDetails {
+         display: block;
+         width: 100%;
+     }
+     
+     #imageAndMainData {
+         overflow: hidden;
+         display: flexbox;
+     }
+     
+     #mainData {
+         display: inline-block;
+         width: 50%;
+         height: 100%;
+         min-width: 250px;
+         min-width: 350px;
+         padding-left: 50px;
+     }
+     /*Add task form*/
+     
+     input[type=text],
+     input[type=number],
+     input[type=date] {
+         border: none;
+         background-color: rgba(0, 0, 0, 0);
+         border-bottom: 2px solid red;
+     }
+     
+     input {
+         display: block;
+         -webkit-box-shadow: none;
+         -moz-box-shadow: none;
+         box-shadow: none;
+     }
+     
+     input:focus {
+         -webkit-box-shadow: none;
+         -moz-box-shadow: none;
+         box-shadow: none;
+     }
+     
+     input:focus+label.textFormLabel {
+         transform: translateY(-25px);
+         transition: 0.5s;
+         color: #000;
+         opacity: 1;
+     }
+     
+     .textFormLabel {
+         position: relative;
+         bottom: 25px;
+         transition: 1s;
+         opacity: 0;
+         color: gray;
+         text-transform: capitalize;
+     }
+     /*applied task popup*/
+     
+     #appliedPopUp {
+         display: none;
+         flex-wrap: wrap;
+         align-content: space-between;
+         justify-content: space-around;
+         padding: 20px;
+         ;
+     }
+     
+     .appliedTask {
+         overflow: hidden;
+         height: fit-content;
+         border: solid salmon 2px;
+         display: inline-block;
+         max-width: 500px;
+         min-width: 300px;
+         width: 100%;
+         margin-bottom: 20px;
+         border-radius: 3px;
+     }
+     
+     #appliedPopUp .close {
+         position: absolute;
+         top: 10px;
+         right: 10px;
+     }
+     
+     .appliedImage {
+         width: 80px;
+         max-width: 20%;
+         display: inline-block;
+         transform: translateY(-50px);
+     }
+     
+     .appliedTaskText {
+         display: inline-block;
+         padding: 5px;
+         width: 70%;
+         max-height: 100%;
+         max-width: 470px;
+         overflow: hidden;
+     }
+     
+     .appliedTaskTitle {
+         display: block;
+         font-weight: bold;
+         font-size: xx-large;
+     }
+     
+     .appliedTaskReward {
+         margin-right: 20px;
+     }
+     
+     .appliedTaskCompany {
+         margin-right: 20px;
+     }
+     
+     .appliedTaskButton {
+         float: right;
+     }
+     /*profile*/
+     
+     #profile {
+         max-width: 500px;
+         min-width: 300px;
+         width: 30%;
+         position: fixed;
+         min-height: 500px;
+         float: right;
+         right: 50vw;
+         transform: translateX(50%);
+         top: 80px;
+         z-index: 80;
+         display: none;
+         max-height: 80vh;
+     }
+     
+     #profile ul li a {
+         color: black;
+         height: fit-content;
+         width: fit-content;
+         background-color: rgb(216, 215, 215);
+         padding: 3px;
+         text-decoration: none;
+         font-size: x-large;
+         border: solid white thin;
+         border-top-right-radius: 7px;
+         margin-left: 5px;
+     }
+     
+     #profile ul li a.active {
+         background-color: rgb(230, 52, 32);
+         color: white;
+         text-emphasis: bold;
+     }
+     
+     .tab-content {
+         height: 100%;
+         padding: 20px;
+         background-color: white;
+         box-shadow: 5px 5px 5px 5px #888888;
+     }
+     
+     #loggedOut {
+         display: none;
+     }
+     
+     #loggedIn {
+         background-color: white;
+         box-shadow: 5px 5px 5px 5px #888888;
+     }
+     
+     #profileCardImage {
+         height: 300px;
+         src: "https://images.unsplash.com/photo-1508138221679-760a23a2285b";
+         object-fit: cover;
+         padding: 20px;
+     }
+     
+     #profileOptions {
+         width: 20%;
+         display: inline-block;
+         height: fit-content;
+         position: absolute;
+         text-align: center;
+     }
+     
+     #loggedIn p.card-text {
+         display: inline-block;
+         width: 70%;
+         height: 100%;
+     }
+     
+     #loggedIn .close {
+         position: absolute;
+         top: 1px;
+         right: 5px;
+     }
+     
+     #profileOptions i {
+         margin-bottom: 10px;
+         display: block;
+         font-size: xx-large;
+         transition: 5s;
+         transition: transform 0.8s;
+         transform-style: preserve-3d;
+     }
+     
+     i.fa-calendar-check-o:hover {
+         transform: rotateX(359deg);
+     }
+     
+     i.fa-gift:hover {
+         animation: gift 0.5s infinite alternate;
+         color: gray;
+     }
+     
+     i.fa-cog:hover {
+         transform: rotate(280deg);
+         color: #aaa9ae;
+     }
+     
+     @keyframes gift {
+         0% {
+             color: rgb(255, 94, 0);
+         }
+         25% {
+             color: orange;
+             transform: scaleY(1.3);
+         }
+         50% {
+             color: rgb(255, 208, 0);
+             transform: scaleX(1.3);
+         }
+         100% {
+             color: red;
+         }
+     }
+     /*claimed*/
+     
+     #claimedPopUp {
+         display: none;
+         flex-wrap: wrap;
+         align-content: space-between;
+         justify-content: space-around;
+         padding: 20px;
+         overflow: scroll;
+         align-items: flex-start;
+     }
+     
+     .claimedReward {
+         overflow: hidden;
+         height: 100px;
+         border: solid salmon 2px;
+         display: inline-block;
+         max-width: 500px;
+         min-width: 300px;
+         width: 100%;
+         margin-bottom: 0px;
+         border-radius: 3px;
+     }
+     
+     #claimedPopUp .close {
+         position: absolute;
+         top: 10px;
+         right: 10px;
+     }
+     
+     .rewardImage {
+         width: 80px;
+         max-width: 20%;
+         display: inline-block;
+         transform: translateY(-50px);
+     }
+     
+     .claimedRewardText {
+         display: inline-block;
+         padding: 5px;
+         width: 70%;
+         max-height: 100%;
+         max-width: 470px;
+         overflow: hidden;
+     }
+     
+     .claimedRewardTitle {
+         display: block;
+         font-weight: bold;
+         font-size: xx-large;
+     }
+     
+     .claimedRewardCost {
+         margin-right: 20px;
+     }
+     
+     .claimedLinkButton {
+         float: right;
+     }
+     /*above all*/
+     
+     #aboveAll {
+         min-height: 100vh;
+         width: 100vw;
+         position: fixed;
+         background-color: black;
+         z-index: 100;
+         padding: 10vw;
+         background-image: url(https://images.unsplash.com/photo-1461532257246-777de18cd58b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80);
+         height: fit-content;
+         background-size: cover;
+         animation: headerchange 20s infinite;
+     }
+     
+     #aboveAll .tab-content {
+         height: fit-content;
+         padding: 20px;
+         width: fit-content;
+         border: black thin solid;
+         float: right;
+         min-width: 300px;
+         display: inline-block;
+         box-shadow: 5px 5px 5px 5px #888888;
+     }
+     
+     #aboveAll ul li a {
+         color: black;
+         height: fit-content;
+         width: fit-content;
+         background-color: rgb(216, 215, 215);
+         padding: 3px;
+         text-decoration: none;
+         font-size: x-large;
+         border: solid white thin;
+         border-top-right-radius: 7px;
+         margin-left: 5px;
+     }
+     
+     #aboveAll ul li a.active {
+         background-color: rgb(230, 52, 32);
+         color: white;
+         text-emphasis: bold;
+     }
+     
+     #title2 {
+         width: fit-content;
+         font-size: 6vw;
+         padding: 10px 10px 10px 10px;
+         color: rgb(10, 10, 10);
+         mix-blend-mode: screen;
+         font-family: 'Comfortaa', cursive;
+         background-color: white;
+         display: inline-block;
+     }
