@@ -1,5 +1,6 @@
      html {
          scroll-behavior: smooth;
+         max-width: 100vw;
      }
      
      body {
@@ -14,7 +15,7 @@
      
      #header {
          background-image: url(https://images.unsplash.com/photo-1461532257246-777de18cd58b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80);
-         width: 100%;
+         width: 100vw;
          min-height: 100vh;
          height: fit-content;
          background-size: cover;
@@ -222,6 +223,10 @@
          width: 100%;
      }
      
+     i.fa {
+         transition: 1s;
+     }
+     
      #sideProfilepara {
          width: 50%;
          display: block;
@@ -313,7 +318,6 @@
      .popup {
          z-index: 50;
          height: fit-content;
-         max-height: 800px;
          width: 90vw;
          margin: 100px 5vw 50px 5vw;
          background-color: rgb(201, 201, 201);
@@ -324,6 +328,9 @@
          left: 0px;
          overflow: scroll;
          display: none;
+         max-height: 80vh;
+         position: fixed;
+         overflow: scroll;
      }
      
      i.fa {
@@ -504,8 +511,7 @@
          position: fixed;
          min-height: 500px;
          float: right;
-         right: 50vw;
-         transform: translateX(50%);
+         right: 20px;
          top: 80px;
          z-index: 80;
          display: none;
@@ -585,32 +591,35 @@
      
      i.fa-calendar-check-o:hover {
          transform: rotateX(359deg);
+         color: rgb(19, 150, 19);
      }
      
      i.fa-gift:hover {
-         animation: gift 0.5s infinite alternate;
-         color: gray;
+         animation: gift 0.3s infinite alternate;
      }
      
      i.fa-cog:hover {
          transform: rotate(280deg);
-         color: #aaa9ae;
+         color: rgb(20, 54, 59);
      }
      
      @keyframes gift {
          0% {
-             color: rgb(255, 94, 0);
-         }
-         25% {
-             color: orange;
-             transform: scaleY(1.3);
+             color: red;
+             transform: scaleY(0.1);
+             transform: scaleX(1.5);
          }
          50% {
-             color: rgb(255, 208, 0);
-             transform: scaleX(1.3);
+             color: orangered;
+             transform: scaleY(1);
+             transform: scaleX(0);
+             transform: translateY(0px);
          }
          100% {
-             color: red;
+             color: rgb(255, 208, 0);
+             transform: scaleY(1.5);
+             transform: scaleX(0.3);
+             transform: translateY(-10px);
          }
      }
      /*claimed*/
@@ -726,4 +735,92 @@
          font-family: 'Comfortaa', cursive;
          background-color: white;
          display: inline-block;
+     }
+     /*LeadersBoard*/
+     
+     #leaderPopUp {
+         flex-wrap: wrap;
+         align-content: space-between;
+         justify-content: space-around;
+         padding: 20px;
+         max-height: 80vh;
+         position: fixed;
+         overflow: scroll;
+     }
+     
+     #leaderPopUp .close {
+         position: absolute;
+         top: 10px;
+         right: 10px;
+     }
+     
+     .leader {
+         overflow: hidden;
+         height: fit-content;
+         border: solid salmon 2px;
+         display: flex;
+         width: 100%;
+         flex-wrap: wrap;
+         margin-bottom: 20px;
+         border-radius: 3px;
+         justify-content: space-around;
+     }
+     
+     .leaderRank {
+         flex-grow: 1;
+         font-size: larger;
+         color: white;
+         padding: 10px;
+         border-radius: 50%;
+         margin: 10px;
+         text-align: center;
+         line-height: 50px;
+         font-size: 30px;
+         max-width: 5%;
+         background-color: blue;
+         min-width: 60px;
+     }
+     
+     .leaderImage {
+         max-width: 100px;
+         max-height: 100px;
+         width: 10%;
+         align-self: center;
+         flex-grow: 2;
+     }
+     
+     .leaderText {
+         padding: 5px;
+         max-height: 100%;
+         overflow: hidden;
+         flex-grow: 4;
+     }
+     
+     .leaderButton {
+         align-self: center;
+         flex-grow: 3;
+         min-width: 20%;
+         margin: 20px;
+         max-width: fit-content;
+     }
+     
+     .leaderName {
+         display: block;
+         font-weight: bold;
+         font-size: xx-large;
+     }
+     
+     .currentLeader {
+         background-color: cornsilk;
+         border: solid rgb(38, 152, 228) 4px;
+     }
+     
+     .leaderScore {
+         margin-right: 20px;
+         font-size: larger;
+     }
+     
+     .leaderApplied {
+         margin-right: 20px;
+         font-size: larger;
      }
