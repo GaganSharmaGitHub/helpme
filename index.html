@@ -13,9 +13,14 @@
     <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="data.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script> 
+
 </head>
 
 <body>
@@ -31,12 +36,20 @@
                 <h3>Log in</h3>
                 <br>
                 <span id="signIn2Warning"></span>
-                <label for="signIn2Id">Id</label> <input type="number" name="" id="signIn2Id" value="0"><br>
+                <label for="signIn2Id">EMAIL Id</label> <input type="email" id="signIn2Id" value=""><br>
                 <label for="signIn2Password">Password</label> <input type="password" value="Gagan" id="signIn2Password"><br>
 
                 <i class="fa fa-eye" style="font-size: 20px;" onclick="showPassword('signIn2Password')"></i>Show password<br>
                 <button class="btn btn-primary" onclick="signIn2()" type="button">Log in</button>
+                 
 
+                <script>
+                    firebase.auth().onAuthStateChanged((user)=>{
+                        if(user){
+                            window.location.href = "";
+                        }
+                    })
+                </script>
             </div>
             <div id="signUp2" class="tab-pane fade">
                 <h3>Sign Up</h3>

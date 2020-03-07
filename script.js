@@ -184,24 +184,24 @@ function viewProfile(x) {
     popUp('profile')
 }
 
-function signIn2() {
-    var userid = parseInt(document.getElementById("signIn2Id").value);
-    var password = document.getElementById("signIn2Password").value;
-    if (userid >= profiles.length) { document.getElementById("signIn2Warning").innerHTML = "ID does not exist"; } else {
-        if (password != profiles[userid].password) {
-            document.getElementById("signIn2Warning").innerHTML = "Incorrect password";
-        } else {
-            currentUser = userid;
-            document.getElementById('aboveAll').style.display = "none";
-            document.getElementById('wholebody').style.display = "block";
-            writeProfile1(currentUser);
-            writeProfile2(currentUser);
-            document.getElementById("postParent").innerHTML = "";
-            for (k in profiles[currentUser].notApplied) { post(k) }
-        }
-    }
-    clearInput();
-}
+// function signIn2() {
+//     var userid = parseInt(document.getElementById("signIn2Id").value);
+//     var password = document.getElementById("signIn2Password").value;
+//     if (userid >= profiles.length) { document.getElementById("signIn2Warning").innerHTML = "ID does not exist"; } else {
+//         if (password != profiles[userid].password) {
+//             document.getElementById("signIn2Warning").innerHTML = "Incorrect password";
+//         } else {
+//             currentUser = userid;
+//             document.getElementById('aboveAll').style.display = "none";
+//             document.getElementById('wholebody').style.display = "block";
+//             writeProfile1(currentUser);
+//             writeProfile2(currentUser);
+//             document.getElementById("postParent").innerHTML = "";
+//             for (k in profiles[currentUser].notApplied) { post(k) }
+//         }
+//     }
+//     clearInput();
+// }
 
 function signUp2() {
     var username = document.getElementById('signUp2Name').value;
