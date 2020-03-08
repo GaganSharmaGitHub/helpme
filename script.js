@@ -184,7 +184,6 @@ function viewProfile(x) {
     popUp('profile')
 }
 
-//<Remove in firebase>
 
 
 function apply(x) {
