@@ -19,36 +19,6 @@
 </head>
 
 <body>
-    <div id="aboveAll" class="animated">
-        <h1 id="title2" class="animated fadeInLeft">HelpMe.org</h1>
-        <div class="tab-content">
-            <ul class="nav nav-tabs">
-                <li class="active"><a class="active" data-toggle="tab" href="#signIn2">Log in</a></li>
-                <li><a data-toggle="tab" href="#signUp2">Sign Up</a></li>
-            </ul>
-
-            <div id="signIn2" class="tab-pane active">
-                <h3>Log in</h3>
-                <br>
-                <span id="signIn2Warning"></span>
-                <label for="signIn2Id">Id</label> <input type="number" name="" id="signIn2Id" value="0"><br>
-                <label for="signIn2Password">Password</label> <input type="password" value="Gagan" id="signIn2Password"><br>
-
-                <i class="fa fa-eye" style="font-size: 20px;" onclick="showPassword('signIn2Password')"></i>Show password<br>
-                <button class="btn btn-primary" onclick="signIn2()" type="button">Log in</button>
-
-            </div>
-            <div id="signUp2" class="tab-pane fade">
-                <h3>Sign Up</h3>
-                <label for="signUp2Name">Name</label> <input type="text" name="name" id="signUp2Name"><br>
-                <label for="signUp2Password">Password</label> <input type="text" name="" id="signUp2Password"><br>
-                <i class="fa fa-eye" style="font-size: 20px;" onclick="showPassword('signUp2Password')"></i>Show password<br>
-                <label for="signUp2Image">Image</label> <input type="text" name="" value="" id="signUp2Image"><br>
-                <button class="btn btn-primary" onclick="signUp2()">Register</button>
-            </div>
-        </div>
-
-    </div>
 
     <div id="stickytop" class="animated fadeInDown">
         <div class="container" class="animated rubberBand" style="width: 5vw;" onclick="menuicon(this)" onclick="opennv()">

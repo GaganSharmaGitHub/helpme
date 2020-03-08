@@ -83,6 +83,7 @@ document.getElementById("yourscore2").innerHTML = profiles[x].score;
 
 //data starts
 
+//<Remove in firebase>
 
 function taskData(title, company, skills, date, reward) {
     this.title = title;
@@ -105,12 +106,7 @@ function user(username, score, id, applied, claimed, notApplied, password, image
 }
 var profiles = [];
 var currentUser;
-profiles[0] = new user("Gagan", 100, 0, [], [1, 1, 1, 1], [], "Gagan", "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg");
 profiles[1] = new user("Ishant", 400, 1, [], [0, 1, 0, 2], [], "Gagan", "https://images-na.ssl-images-amazon.com/images/I/71kkMXAcLCL._SY355_.png");
-profiles[2] = new user("Gen", 300, 2, [], [], [0, 0, 0, 0], "Gagan", "https://static.zerochan.net/Asagiri.Gen.full.2674920.jpg");
-profiles[3] = new user("Ryusui", 200, 3, [], [0, 0], [], "Gagan", "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg");
-profiles[4] = new user("Someone", 355, 4, [], [1, 1], [], "Gagan", "https://avatars2.githubusercontent.com/u/4368783");
-profiles[5] = new user("poor soul", 30, 5, [], [2, 2], [], "Gagan", "https://avatars2.githubusercontent.com/u/4364567");
 
 function reward(title, token, link, status) {
     this.title = title;
@@ -120,6 +116,7 @@ function reward(title, token, link, status) {
 }
 var allReward = [];
 var leadersboard = [];
+//</Remove in firebase>
 
 function leaderSort() {
     for (i in profiles) {
@@ -141,6 +138,8 @@ function totalScore(a) {
 
 
 }
+//<Remove in firebase>
+
 allReward[0] = new reward("Amazon coupon", 20, "link", "available");
 allReward[1] = new reward("iPhone", 200, "link", "available");
 allReward[2] = new reward("Switzerland Trip", 500, "link", "available");
@@ -150,6 +149,7 @@ data[1] = new taskData("Testing", "Titus Tech", "JavaScript", "April", 200);
 data[2] = new taskData("C# coding", "TigerOne", "C#", "January", 200);
 data[3] = new taskData("python debugging", "Titus Tech", "python", "February", 250);
 
+//</Remove in firebase>
 
 function writeData(x) {
     document.getElementById("taskDataTitle").innerHTML = profiles[currentUser].notApplied[x].title;
@@ -184,49 +184,7 @@ function viewProfile(x) {
     popUp('profile')
 }
 
-function signIn2() {
-    var userid = parseInt(document.getElementById("signIn2Id").value);
-    var password = document.getElementById("signIn2Password").value;
-    if (userid >= profiles.length) { document.getElementById("signIn2Warning").innerHTML = "ID does not exist"; } else {
-        if (password != profiles[userid].password) {
-            document.getElementById("signIn2Warning").innerHTML = "Incorrect password";
-        } else {
-            currentUser = userid;
-            document.getElementById('aboveAll').style.display = "none";
-            document.getElementById('wholebody').style.display = "block";
-            writeProfile1(currentUser);
-            writeProfile2(currentUser);
-            document.getElementById("postParent").innerHTML = "";
-            for (k in profiles[currentUser].notApplied) { post(k) }
-        }
-    }
-    clearInput();
-}
-
-function signUp2() {
-    var username = document.getElementById('signUp2Name').value;
-    var password = document.getElementById("signUp2Password").value;
-    var image = document.getElementById("signUp2Image").value;
-    if (image == "") { image = "https://avatars2.githubusercontent.com/u/4364604" + (profiles.length - 5).toString(); }
-
-    var num = profiles.push(new user(username, 0, 0, [], [], [], password, image));
-    profiles[num - 1].id = num - 1;
-    currentUser = num - 1;
-    for (i in data) {
-        var num = profiles[currentUser].notApplied.push(new taskData(data[i].title, data[i].company, data[i].skills, data[i].date, data[i].reward));
-    }
-
-    alert("Welcome " + profiles[currentUser].username + " ,Your id is: " + profiles[currentUser].id + " remember it for future login")
-    writeProfile2(currentUser);
-    writeProfile1(currentUser);
-    document.getElementById('aboveAll').style.display = "none";
-    document.getElementById('wholebody').style.display = "block";
-    document.getElementById("postParent").innerHTML = "";
-    for (k in profiles[currentUser].notApplied) { post(k) }
-    clearInput();
-}
-
-
+//<Remove in firebase>
 
 
 function apply(x) {
@@ -240,7 +198,6 @@ function apply(x) {
     for (k in profiles[currentUser].notApplied) { post(k) };
 
 }
-
 function claim(x) {
     if (profiles[currentUser].score < allReward[x].token) { alert("Balance insufficient"); } else {
         profiles[currentUser].score = profiles[currentUser].score - allReward[x].token;
@@ -252,6 +209,7 @@ function claim(x) {
 
     }
 }
+//</Remove in firebase>
 
 function expandAppliedList() {
     document.getElementById("appliedPopUp").style.display = "flex";
@@ -342,11 +300,6 @@ function expandClaimedList() {
 }
 
 function clearInput() {
-    document.getElementById("signIn2Id").value = "";
-    document.getElementById("signIn2Password").value = "";
-    document.getElementById("signUp2Name").value = "";
-    document.getElementById("signUp2Password").value = "";
-    document.getElementById("signUp2Image").value = "";
     document.getElementById("detailsForm").value = "";
     document.getElementById("titleForm").value = "";
     document.getElementById("skillsForm").value = "";
@@ -368,7 +321,7 @@ function postInClaimedReward(x) {
 
 }
 
-
+//<Remove in firebase>
 function constructNotApplied() {
     for (j in profiles) {
         for (i in data) {
@@ -377,6 +330,8 @@ function constructNotApplied() {
         }
     }
 }
+//</Remove in firebase>
+
 constructNotApplied();
 
 function post(num) {
@@ -399,6 +354,7 @@ function post(num) {
 }
 
 
+
 function postReward(num) {
     const parent = document.getElementById("rewardParent");
     let newPost = document.createElement('div');
@@ -414,3 +370,12 @@ function postReward(num) {
         '<i class="fas fa-award"></i > </a></div>';
     parent.appendChild(newPost);
 }
+for(i in allReward){
+    postReward(i)
+}
+//remove with firbare
+currentUser = 1;
+writeProfile1(currentUser);
+writeProfile2(currentUser);
+document.getElementById("postParent").innerHTML = "";
+for (k in profiles[currentUser].notApplied) { post(k) }
